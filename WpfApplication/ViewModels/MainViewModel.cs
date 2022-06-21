@@ -9,6 +9,9 @@ namespace WpfApplication.ViewModels
     using WpfTaskApplication.Commands;
     using WpfApplication.Models;
 
+    /// <summary>
+    /// モデルとコマンドを集約しViewへ公開
+    /// </summary>
     public class MainViewModel
     {
         public MainViewModel()

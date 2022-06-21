@@ -9,7 +9,9 @@
         <vm:MainViewModel />
     </Window.DataContext>
     <Grid>
-        <TextBox Text="{Binding UserModel.Name}" HorizontalAlignment="Center" Height="23" Margin="0,-33,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="240"/>
+        <TextBox Text="{Binding UserModel.Name, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" Height="23" Margin="0,-100,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="240"/>
+        <TextBlock Text="{Binding UserModel.Name}" HorizontalAlignment="Center" Height="23" Margin="0,-40,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="240" />
+
         <Button Content="Button" HorizontalAlignment="Center" Margin="0,30,0,0" Width="75" Height="20" VerticalAlignment="Center" Command="{Binding Path=OpenMessageDialogCommand}" CommandParameter="{Binding Path=UserModel.Name}"/>
     </Grid>
 </Window>
